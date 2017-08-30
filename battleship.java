@@ -1,10 +1,11 @@
 /**
- *
- * @author Daniel, laznin@gmail.com
- * @version 1.0
- * @since 2/11/2015
- *
- **/
+*
+* @author Daniel, djbritt@live.com
+* @version 1.0
+* @since 2/11/2015
+*
+**/
+ 
 public class battleship {
 	static String letters = "0ABCDEFGHIJ";
 	static String num = "ABSDP";
@@ -38,12 +39,13 @@ public class battleship {
 				}
 				System.out.println();
 				System.out.println();
+				System.out.println();
+				
 			}
 			System.out.printf(" %-2d", row + 1);
 			for (int col = 0; col < 10; col++) {
 				System.out.printf(" %-2c", board[row][col]);
 			}
-
 			System.out.println();
 		}
 	}
@@ -77,7 +79,6 @@ public class battleship {
 			if (counter == 0) {
 				break;
 			}
-
 			if (gameBoard[guess1][guess2] != 'X') {
 				gameBoard[guess1][guess2] = 'X';
 			} else {
@@ -107,7 +108,6 @@ public class battleship {
 		ships[3][1] = 3;
 		ships[4][0] = 'P';
 		ships[4][1] = 2;
-
 		for (int i = 0; i < 5; i++) {
 			double ranNo = Math.random() * 8;
 			double aPo = Math.random() * 10;
@@ -121,6 +121,9 @@ public class battleship {
 
 			int curNum = (int) ships[i][1];
 			char curLet = ships[i][0];
+			
+			
+			
 			if (ranNo > 4) {
 				if (i == 0) {
 					for (int j = 0; j < curNum; j++) {
@@ -235,9 +238,9 @@ public class battleship {
 						gameBoard[j][pPos] = curLet;
 					}
 				}
-
 			}
 		}
+
 		return gameBoard;
 	}
 }
